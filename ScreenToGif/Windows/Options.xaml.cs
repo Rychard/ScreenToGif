@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
@@ -17,8 +18,7 @@ using ScreenToGif.Util.Writers;
 using ScreenToGif.Windows.Other;
 using Application = System.Windows.Application;
 using DialogResultWinForms = System.Windows.Forms.DialogResult;
-using ListBox = System.Windows.Controls.ListBox;
-using Path = System.IO.Path;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
 namespace ScreenToGif.Windows
 {
@@ -297,7 +297,7 @@ namespace ScreenToGif.Windows
             #endregion
         }
 
-        private void GridSizeTextBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private void GridSizeTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             var textBox = sender as NumericTextBox;
 
@@ -543,7 +543,7 @@ namespace ScreenToGif.Windows
             //TODO: Load all settings.
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closing(object sender, CancelEventArgs e)
         {
             Settings.Default.Save();
         }

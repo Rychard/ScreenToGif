@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
@@ -606,7 +607,7 @@ namespace ScreenToGif.Webcam.DirectX
             //scan0 += (height - 1) * stride;
             scan0 += height * stride;
 
-            var b = new Bitmap(width, height, -stride, System.Drawing.Imaging.PixelFormat.Format24bppRgb, (IntPtr)scan0);
+            var b = new Bitmap(width, height, -stride, PixelFormat.Format24bppRgb, (IntPtr)scan0);
             handle.Free();
 
             CaptureFrameEvent(b);
@@ -661,7 +662,7 @@ namespace ScreenToGif.Webcam.DirectX
             //address += (height - 1) * stride;
             address += height * stride;
 
-            var bitmap = new Bitmap(width, height, -stride, System.Drawing.Imaging.PixelFormat.Format24bppRgb, address);
+            var bitmap = new Bitmap(width, height, -stride, PixelFormat.Format24bppRgb, address);
             handleObj.Free();
 
             return bitmap;

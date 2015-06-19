@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Text;
 
 namespace ScreenToGif.FileWriters.GifWriter
 {
@@ -654,7 +655,7 @@ namespace ScreenToGif.FileWriters.GifWriter
             //    fs.WriteByte(b);
             //}
 
-            var bytes = System.Text.Encoding.ASCII.GetBytes(comment);
+            var bytes = Encoding.ASCII.GetBytes(comment);
             _fs.WriteByte((byte)bytes.Length);
             _fs.Write(bytes, 0, bytes.Length);
             _fs.WriteByte(0);

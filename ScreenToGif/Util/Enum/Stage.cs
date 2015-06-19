@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ScreenToGif.Util.Enum
+﻿namespace ScreenToGif.Util.Enum
 {
     /// <summary>
     /// Stage status of the Recording process.

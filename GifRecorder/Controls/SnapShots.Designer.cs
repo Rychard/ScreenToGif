@@ -1,9 +1,11 @@
+using System.ComponentModel;
+
 namespace ScreenToGif.Controls
 {
     partial class SnapShots
     {
 
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.

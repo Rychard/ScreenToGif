@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 using ScreenToGif.Properties;
 using ScreenToGif.Util;
@@ -37,7 +39,7 @@ namespace ScreenToGif.Pages
             //To localize this page too.
             if (CultureUtil.Lang.Length >= 2)
             {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CultureUtil.Lang);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(CultureUtil.Lang);
             }
 
             InitializeComponent();

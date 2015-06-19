@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Drawing;
-using System.Windows.Documents;
 using System.Windows.Forms;
 using ScreenToGif.Properties;
 

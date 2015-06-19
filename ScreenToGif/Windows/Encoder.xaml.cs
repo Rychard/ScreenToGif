@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 using ScreenToGif.Controls;
@@ -55,7 +57,7 @@ namespace ScreenToGif.Windows
 
         #region Events
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closing(object sender, CancelEventArgs e)
         {
             //TODO: Check for memmory leaks.
 
@@ -461,9 +463,9 @@ namespace ScreenToGif.Windows
 
         private static WindowState _lastState = WindowState.Normal;
 
-        private static System.Windows.Forms.Screen GetScreen(Window window)
+        private static Screen GetScreen(Window window)
         {
-            return System.Windows.Forms.Screen.FromHandle(new WindowInteropHelper(window).Handle);
+            return Screen.FromHandle(new WindowInteropHelper(window).Handle);
         }
 
         #endregion
