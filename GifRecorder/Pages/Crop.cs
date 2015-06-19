@@ -2,8 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using ScreenToGif.Properties;
-using Color = System.Drawing.Color;
-using Pen = System.Drawing.Pen;
 
 namespace ScreenToGif.Pages
 {

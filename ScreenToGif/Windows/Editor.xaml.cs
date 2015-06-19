@@ -7,11 +7,11 @@ using System.IO.Compression;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
-using Microsoft.Win32;
 using ScreenToGif.Controls;
 using ScreenToGif.ImageUtil;
 using ScreenToGif.Properties;
@@ -19,6 +19,15 @@ using ScreenToGif.Util;
 using ScreenToGif.Util.Enum;
 using ScreenToGif.Util.Writers;
 using ScreenToGif.Windows.Other;
+using Color = System.Drawing.Color;
+using Cursors = System.Windows.Input.Cursors;
+using DataFormats = System.Windows.DataFormats;
+using DragDropEffects = System.Windows.DragDropEffects;
+using DragEventArgs = System.Windows.DragEventArgs;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
+using Pen = System.Drawing.Pen;
+using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 
 namespace ScreenToGif.Windows
 {
@@ -45,7 +54,7 @@ namespace ScreenToGif.Windows
         /// </summary>
         public List<FrameInfo> ListFrames { get; set; }
 
-        private readonly System.Windows.Forms.Timer _timerPreview = new System.Windows.Forms.Timer();
+        private readonly Timer _timerPreview = new Timer();
 
         #endregion
 
@@ -694,7 +703,7 @@ namespace ScreenToGif.Windows
                                                     frame.CursorInfo.Image.Width - 10,
                                                     frame.CursorInfo.Image.Height - 10);
 
-                                            graph.DrawEllipse(new System.Drawing.Pen(new SolidBrush(System.Drawing.Color.Yellow), 3), rectEllipse);
+                                            graph.DrawEllipse(new Pen(new SolidBrush(Color.Yellow), 3), rectEllipse);
                                         }
 
                                         #endregion

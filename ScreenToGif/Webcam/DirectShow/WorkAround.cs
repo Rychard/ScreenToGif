@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Remoting.Services;
 
 namespace ScreenToGif.Webcam.DirectShow
 {
@@ -28,7 +25,7 @@ namespace ScreenToGif.Webcam.DirectShow
             IntPtr ptrXX;
             hr = Marshal.QueryInterface(ptrIf, ref iu, out ptrXX);
 
-            object ooo = System.Runtime.Remoting.Services.EnterpriseServicesHelper.WrapIUnknownWithComObject(ptrIf);
+            object ooo = EnterpriseServicesHelper.WrapIUnknownWithComObject(ptrIf);
             int ct = Marshal.Release(ptrIf);
             return ooo;
         }

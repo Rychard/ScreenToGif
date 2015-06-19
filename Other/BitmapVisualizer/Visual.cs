@@ -14,7 +14,7 @@ namespace ImageVisualizer
             pbImage.Image = image;
         }
 
-        private void cbShowGrid_CheckedChanged(object sender, System.EventArgs e)
+        private void cbShowGrid_CheckedChanged(object sender, EventArgs e)
         {
             this.BackgroundImage = cbShowGrid.Checked ? Resources.grid : null;
         }

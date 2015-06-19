@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
-using ImageVisualizer;
 using Microsoft.VisualStudio.DebuggerVisualizers;
 
 [assembly: DebuggerVisualizer(typeof(ImageVisualizer.ImageVisualizer), typeof(VisualizerObjectSource), Target = typeof(Image), Description = "Image Visualizer")]

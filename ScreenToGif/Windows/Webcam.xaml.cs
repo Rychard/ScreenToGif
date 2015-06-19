@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using ScreenToGif.FileWriters;
 using ScreenToGif.Properties;
 using ScreenToGif.Util;
@@ -12,7 +14,6 @@ using ScreenToGif.Util.ActivityHook;
 using ScreenToGif.Util.Enum;
 using ScreenToGif.Util.Writers;
 using ScreenToGif.Webcam.DirectX;
-using Timer = System.Windows.Forms.Timer;
 
 namespace ScreenToGif.Windows
 {
@@ -62,7 +63,7 @@ namespace ScreenToGif.Windows
         /// <summary>
         /// The Path of the Temp folder.
         /// </summary>
-        private readonly string _pathTemp = System.IO.Path.GetTempPath() +
+        private readonly string _pathTemp = Path.GetTempPath() +
             String.Format(@"ScreenToGif\Recording\{0}\", DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss")); //TODO: Change to a more dynamic folder naming.
 
         private Timer _timer = new Timer();
@@ -221,7 +222,7 @@ namespace ScreenToGif.Windows
             }
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closing(object sender, CancelEventArgs e)
         {
             try
             {

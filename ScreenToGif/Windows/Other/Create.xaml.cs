@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using ScreenToGif.Controls;
-using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+using ScreenToGif.Properties;
 
 namespace ScreenToGif.Windows.Other
 {
@@ -40,8 +40,8 @@ namespace ScreenToGif.Windows.Other
         {
             InitializeComponent();
 
-            WidthText.Text = Properties.Settings.Default.CreateWidth.ToString();
-            HeightText.Text = Properties.Settings.Default.CreateHeight.ToString();
+            WidthText.Text = Settings.Default.CreateWidth.ToString();
+            HeightText.Text = Settings.Default.CreateHeight.ToString();
         }
 
         #region Input Events
@@ -78,8 +78,8 @@ namespace ScreenToGif.Windows.Other
             if (colorBrush != null)
                 Color = colorBrush.Color;
 
-            Properties.Settings.Default.CreateLastSelectedColor = Color;
-            Properties.Settings.Default.Save();
+            Settings.Default.CreateLastSelectedColor = Color;
+            Settings.Default.Save();
 
             this.DialogResult = true;
             this.Close();
@@ -110,13 +110,13 @@ namespace ScreenToGif.Windows.Other
 
         private void CustomColorStackPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            var colorPicker = new ColorSelector(Properties.Settings.Default.CreateLastSelectedColor, false);
+            var colorPicker = new ColorSelector(Settings.Default.CreateLastSelectedColor, false);
             colorPicker.Owner = this;
             var result = colorPicker.ShowDialog();
 
             if (result.HasValue && result.Value)
             {
-                Properties.Settings.Default.CreateLastSelectedColor = colorPicker.SelectedColor;
+                Settings.Default.CreateLastSelectedColor = colorPicker.SelectedColor;
 
                 BackCombo.SelectedIndex = 4;
             }

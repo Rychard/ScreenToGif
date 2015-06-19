@@ -2,7 +2,6 @@
 using System.Windows;
 using System.Windows.Threading;
 using ScreenToGif.Properties;
-using ScreenToGif.Util;
 using ScreenToGif.Util.Enum;
 using ScreenToGif.Util.Writers;
 using ScreenToGif.Windows;

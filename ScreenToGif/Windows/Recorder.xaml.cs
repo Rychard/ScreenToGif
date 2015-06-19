@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Windows;
@@ -10,15 +10,13 @@ using System.Windows.Input;
 using ScreenToGif.Capture;
 using ScreenToGif.Controls;
 using ScreenToGif.FileWriters;
-using ScreenToGif.ImageUtil;
 using ScreenToGif.Properties;
 using ScreenToGif.Util;
 using ScreenToGif.Util.ActivityHook;
 using ScreenToGif.Util.Enum;
 using ScreenToGif.Util.Writers;
-using HorizontalAlignment = System.Windows.HorizontalAlignment;
-using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 using Point = System.Drawing.Point;
+using Size = System.Drawing.Size;
 using Timer = System.Windows.Forms.Timer;
 
 namespace ScreenToGif.Windows
@@ -353,7 +351,7 @@ namespace ScreenToGif.Windows
                     IsRecording(true);
                     Topmost = true;
 
-                    _size = new System.Drawing.Size(_bt.Size.Width, _bt.Size.Height);
+                    _size = new Size(_bt.Size.Width, _bt.Size.Height);
                     FrameRate.Start(_capture.Interval);
 
                     #region Start
@@ -733,7 +731,7 @@ namespace ScreenToGif.Windows
 
         #region Other Events
 
-        private void LightWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void LightWindow_Closing(object sender, CancelEventArgs e)
         {
             #region Save Settings
 

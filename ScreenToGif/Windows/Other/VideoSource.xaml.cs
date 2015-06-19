@@ -5,7 +5,6 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Threading;
 using ScreenToGif.Util.Writers;
 
 //When using the NumericUpAndDown first, the slider won't work.

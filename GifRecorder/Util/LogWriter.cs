@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace ScreenToGif.Util
@@ -27,9 +26,9 @@ namespace ScreenToGif.Util
             // the user's role and write access to different 
             // areas of the file system
 
-            if (!System.IO.Directory.Exists(Application.StartupPath + "\\Logs\\"))
+            if (!Directory.Exists(Application.StartupPath + "\\Logs\\"))
             {
-                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\Logs\\");
+                Directory.CreateDirectory(Application.StartupPath + "\\Logs\\");
             }
 
             string DateAppendage = DateTime.Now.Day.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Year.ToString();

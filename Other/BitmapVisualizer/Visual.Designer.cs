@@ -1,11 +1,14 @@
-﻿namespace ImageVisualizer
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace ImageVisualizer
 {
     partial class Visual
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -109,9 +112,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbImage;
-        private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.CheckBox cbShowGrid;
-        private System.Windows.Forms.Panel panel1;
+        private PictureBox pbImage;
+        private Button btnOk;
+        private CheckBox cbShowGrid;
+        private Panel panel1;
     }
 }

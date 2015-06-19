@@ -8,14 +8,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.CodeDom.Compiler;
+using System.Configuration;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Windows;
+using System.Windows.Forms;
+using System.Windows.Media;
+
 namespace ScreenToGif.Properties {
     
     
-    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    [CompilerGenerated()]
+    [GeneratedCode("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    internal sealed partial class Settings : ApplicationSettingsBase {
         
-        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        private static Settings defaultInstance = ((Settings)(Synchronized(new Settings())));
         
         public static Settings Default {
             get {
@@ -23,9 +31,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("False")]
         public bool FullScreen {
             get {
                 return ((bool)(this["FullScreen"]));
@@ -35,9 +43,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("False")]
         public bool PreStart {
             get {
                 return ((bool)(this["PreStart"]));
@@ -47,9 +55,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("True")]
         public bool ShowCursor {
             get {
                 return ((bool)(this["ShowCursor"]));
@@ -59,9 +67,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("False")]
         public bool Snapshot {
             get {
                 return ((bool)(this["Snapshot"]));
@@ -71,9 +79,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("0")]
         public int StartUp {
             get {
                 return ((int)(this["StartUp"]));
@@ -83,9 +91,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("False")]
         public bool MouseClicks {
             get {
                 return ((bool)(this["MouseClicks"]));
@@ -95,9 +103,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("False")]
         public bool UseDefaultOutput {
             get {
                 return ((bool)(this["UseDefaultOutput"]));
@@ -107,9 +115,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("")]
         public string DefaultOutput {
             get {
                 return ((string)(this["DefaultOutput"]));
@@ -119,9 +127,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("auto")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("auto")]
         public string Language {
             get {
                 return ((string)(this["Language"]));
@@ -131,9 +139,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("15")]
         public int LastFps {
             get {
                 return ((int)(this["LastFps"]));
@@ -143,9 +151,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("518")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("518")]
         public int Width {
             get {
                 return ((int)(this["Width"]));
@@ -155,9 +163,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("269")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("269")]
         public int Height {
             get {
                 return ((int)(this["Height"]));
@@ -167,9 +175,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("True")]
         public bool CustomEncoding {
             get {
                 return ((bool)(this["CustomEncoding"]));
@@ -179,21 +187,21 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("#FF32CD32")]
-        public global::System.Windows.Media.Color TransparentColor {
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("#FF32CD32")]
+        public Color TransparentColor {
             get {
-                return ((global::System.Windows.Media.Color)(this["TransparentColor"]));
+                return ((Color)(this["TransparentColor"]));
             }
             set {
                 this["TransparentColor"] = value;
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("True")]
         public bool PaintTransparent {
             get {
                 return ((bool)(this["PaintTransparent"]));
@@ -203,9 +211,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("True")]
         public bool Looped {
             get {
                 return ((bool)(this["Looped"]));
@@ -215,9 +223,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("2")]
         public int RepeatCount {
             get {
                 return ((int)(this["RepeatCount"]));
@@ -227,9 +235,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("True")]
         public bool RepeatForever {
             get {
                 return ((bool)(this["RepeatForever"]));
@@ -239,9 +247,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("10")]
         public int Quality {
             get {
                 return ((int)(this["Quality"]));
@@ -251,33 +259,33 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("F7")]
-        public global::System.Windows.Forms.Keys StartPauseKey {
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("F7")]
+        public Keys StartPauseKey {
             get {
-                return ((global::System.Windows.Forms.Keys)(this["StartPauseKey"]));
+                return ((Keys)(this["StartPauseKey"]));
             }
             set {
                 this["StartPauseKey"] = value;
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("F8")]
-        public global::System.Windows.Forms.Keys StopKey {
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("F8")]
+        public Keys StopKey {
             get {
-                return ((global::System.Windows.Forms.Keys)(this["StopKey"]));
+                return ((Keys)(this["StopKey"]));
             }
             set {
                 this["StopKey"] = value;
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("True")]
         public bool DetectUnchanged {
             get {
                 return ((bool)(this["DetectUnchanged"]));
@@ -287,45 +295,45 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("#FFF5F5F5")]
-        public global::System.Windows.Media.Color GridColor1 {
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("#FFF5F5F5")]
+        public Color GridColor1 {
             get {
-                return ((global::System.Windows.Media.Color)(this["GridColor1"]));
+                return ((Color)(this["GridColor1"]));
             }
             set {
                 this["GridColor1"] = value;
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("#FFF0F0F0")]
-        public global::System.Windows.Media.Color GridColor2 {
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("#FFF0F0F0")]
+        public Color GridColor2 {
             get {
-                return ((global::System.Windows.Media.Color)(this["GridColor2"]));
+                return ((Color)(this["GridColor2"]));
             }
             set {
                 this["GridColor2"] = value;
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0,0,20,20")]
-        public global::System.Windows.Rect GridSize {
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("0,0,20,20")]
+        public Rect GridSize {
             get {
-                return ((global::System.Windows.Rect)(this["GridSize"]));
+                return ((Rect)(this["GridSize"]));
             }
             set {
                 this["GridSize"] = value;
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("True")]
         public bool FixedFrameRate {
             get {
                 return ((bool)(this["FixedFrameRate"]));
@@ -335,9 +343,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("1000")]
         public int SnapshotDefaultDelay {
             get {
                 return ((int)(this["SnapshotDefaultDelay"]));
@@ -347,9 +355,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("15")]
         public int LastFpsImport {
             get {
                 return ((int)(this["LastFpsImport"]));
@@ -359,33 +367,33 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("#FFFFFFFF")]
-        public global::System.Windows.Media.Color InsertFillColor {
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("#FFFFFFFF")]
+        public Color InsertFillColor {
             get {
-                return ((global::System.Windows.Media.Color)(this["InsertFillColor"]));
+                return ((Color)(this["InsertFillColor"]));
             }
             set {
                 this["InsertFillColor"] = value;
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("#FFFFFFFF")]
-        public global::System.Windows.Media.Color CreateLastSelectedColor {
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("#FFFFFFFF")]
+        public Color CreateLastSelectedColor {
             get {
-                return ((global::System.Windows.Media.Color)(this["CreateLastSelectedColor"]));
+                return ((Color)(this["CreateLastSelectedColor"]));
             }
             set {
                 this["CreateLastSelectedColor"] = value;
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("500")]
         public int CreateWidth {
             get {
                 return ((int)(this["CreateWidth"]));
@@ -395,9 +403,9 @@ namespace ScreenToGif.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        [UserScopedSetting()]
+        [DebuggerNonUserCode()]
+        [DefaultSettingValue("200")]
         public int CreateHeight {
             get {
                 return ((int)(this["CreateHeight"]));

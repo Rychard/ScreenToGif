@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using ScreenToGif.Capture;
@@ -15,9 +16,7 @@ using ScreenToGif.Encoding;
 using ScreenToGif.Pages;
 using ScreenToGif.Properties;
 using ScreenToGif.Util;
-using AnimatedGifEncoder = ScreenToGif.Encoding.AnimatedGifEncoder;
-using Cursors = System.Windows.Forms.Cursors;
-using KeyEventArgs = System.Windows.Forms.KeyEventArgs;
+using Timer = System.Windows.Forms.Timer;
 
 namespace ScreenToGif
 {
@@ -217,7 +216,7 @@ namespace ScreenToGif
             //Put the grid as background.
             RightSplit.Panel2.BackgroundImage =
                 (con_showGrid.Checked = Settings.Default.ShowGrid) ? //If
-                Properties.Resources.grid : null;  //True-False
+                Resources.grid : null;  //True-False
 
             //Recording options.
             con_Fullscreen.Checked = Settings.Default.fullscreen;
@@ -825,7 +824,7 @@ namespace ScreenToGif
                             //Set to snapshot mode, change the text of the record button to "Snap" and 
                             //every press of the button, takes a screenshot
                             _stage = Stage.Snapping;
-                            btnRecordPause.Image = Properties.Resources.Snap16x;
+                            btnRecordPause.Image = Resources.Snap16x;
                             btnRecordPause.Text = Resources.btnSnap;
                             btnRecordPause.ImageAlign = ContentAlignment.MiddleLeft;
                             this.Text = "Screen To Gif - " + Resources.Con_SnapshotMode;
@@ -3427,7 +3426,7 @@ namespace ScreenToGif
                     strFormat.Alignment = StringAlignment.Center;
                     strFormat.LineAlignment = StringAlignment.Center;
 
-                    grp.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+                    grp.TextRenderingHint = TextRenderingHint.AntiAlias;
                     grp.DrawString(title.Content, title.FontTitle, new SolidBrush(title.ColorForeground),
                         new RectangleF(0, 0, titleBitmap.Width, titleBitmap.Height), strFormat);
 
@@ -3596,10 +3595,10 @@ namespace ScreenToGif
 
         #region Play Preview
 
-        readonly System.Windows.Forms.Timer _timerPlayPreview = new System.Windows.Forms.Timer();
+        readonly Timer _timerPlayPreview = new Timer();
         private int _actualFrame = 0;
 
-        private void pictureBitmap_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void pictureBitmap_MouseClick(object sender, MouseEventArgs e)
         {
             //Cursor.Cross is for point selection.
             if (pictureBitmap.Cursor != Cursors.Cross)
@@ -3735,7 +3734,7 @@ namespace ScreenToGif
             GC.Collect(2);
         }
 
-        private void contextMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        private void contextMenu_Opening(object sender, CancelEventArgs e)
         {
             StopPreview();
         }
@@ -3785,7 +3784,7 @@ namespace ScreenToGif
         /// <summary>
         /// Updates the <see cref="_labelClicked"/> flag or opens the contextMenu.
         /// </summary>
-        private void lblDelay_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void lblDelay_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -3802,7 +3801,7 @@ namespace ScreenToGif
         /// <summary>
         /// Gets if the user is draging to up or down and updates the values.
         /// </summary>
-        private void lblDelay_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void lblDelay_MouseMove(object sender, MouseEventArgs e)
         {
             //If the user is not clicking, returns.
             if (!_labelClicked)
@@ -3833,7 +3832,7 @@ namespace ScreenToGif
         /// <summary>
         /// Updates the flag <see cref="_labelClicked"/> to false and sets the delay value to the list.
         /// </summary>
-        private void lblDelay_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void lblDelay_MouseUp(object sender, MouseEventArgs e)
         {
             _labelClicked = false;
 
@@ -4033,7 +4032,7 @@ namespace ScreenToGif
             }
         }
 
-        private void contextMenuTreeview_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        private void contextMenuTreeview_Opening(object sender, CancelEventArgs e)
         {
             StopPreview();
 
@@ -4188,7 +4187,7 @@ namespace ScreenToGif
             Settings.Default.snapshot = con_Snapshot.Checked;
         }
 
-        private void contextRecord_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        private void contextRecord_Opening(object sender, CancelEventArgs e)
         {
             btnRecordPause.BackColor = Color.DodgerBlue;
 

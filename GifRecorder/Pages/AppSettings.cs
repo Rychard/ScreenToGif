@@ -332,11 +332,11 @@ namespace ScreenToGif.Pages
         {
             if (comboStartPauseKey.Text.Equals(comboStopKey.Text))
             {
-                comboStartPauseKey.Text = Properties.Settings.Default.startPauseKey.ToString();
+                comboStartPauseKey.Text = Settings.Default.startPauseKey.ToString();
             }
             else
             {
-                Properties.Settings.Default.startPauseKey = getKeys(comboStartPauseKey.Text);
+                Settings.Default.startPauseKey = getKeys(comboStartPauseKey.Text);
             }
         }
 
@@ -344,11 +344,11 @@ namespace ScreenToGif.Pages
         {
             if (comboStopKey.Text.Equals(comboStartPauseKey.Text))
             {
-                comboStopKey.Text = Properties.Settings.Default.stopKey.ToString();
+                comboStopKey.Text = Settings.Default.stopKey.ToString();
             }
             else
             {
-                Properties.Settings.Default.stopKey = getKeys(comboStopKey.Text);
+                Settings.Default.stopKey = getKeys(comboStopKey.Text);
             }
         }
 
